@@ -5,31 +5,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowListCategoryBinding
-import com.bhubaneswar.app.modules.listcategory.`data`.model.ListCategoryRowModel
+import com.bhubaneswar.app.databinding.RowListCategory1Binding
+import com.bhubaneswar.app.modules.listcategory.`data`.model.ListCategory1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<ListCategoryRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowListCategoryVH>() {
+  public val list: List<ListCategory1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowListCategory1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowListCategoryVH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_list_category,parent,false)
-    return RowListCategoryVH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowListCategory1VH {
+    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_list_category1,parent,false)
+    return RowListCategory1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowListCategoryVH, position: Int): Unit {
-    val listCategoryRowModel = ListCategoryRowModel()
+  public override fun onBindViewHolder(holder: RowListCategory1VH, position: Int): Unit {
+    val listCategory1RowModel = ListCategory1RowModel()
     // TODO uncomment following line after integration with data source
-    // val listCategoryRowModel = list[position]
-    holder.binding.listCategoryRowModel = listCategoryRowModel
+    // val listCategory1RowModel = list[position]
+    holder.binding.listCategory1RowModel = listCategory1RowModel
   }
 
   public override fun getItemCount(): Int = 10
@@ -40,14 +40,14 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: ListCategoryRowModel
+      item: ListCategory1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowListCategoryVH(
+  public inner class RowListCategory1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowListCategoryBinding = RowListCategoryBinding.bind(itemView)
+    public val binding: RowListCategory1Binding = RowListCategory1Binding.bind(itemView)
   }
 }

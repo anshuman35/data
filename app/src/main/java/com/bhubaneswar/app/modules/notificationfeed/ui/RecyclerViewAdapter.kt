@@ -5,32 +5,32 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowNotificationFeedBinding
-import com.bhubaneswar.app.modules.notificationfeed.`data`.model.NotificationFeedRowModel
+import com.bhubaneswar.app.databinding.RowNotificationFeed1Binding
+import com.bhubaneswar.app.modules.notificationfeed.`data`.model.NotificationFeed1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<NotificationFeedRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowNotificationFeedVH>() {
+  public val list: List<NotificationFeed1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowNotificationFeed1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowNotificationFeedVH {
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowNotificationFeed1VH {
     val
-        view=LayoutInflater.from(parent.context).inflate(R.layout.row_notification_feed,parent,false)
-    return RowNotificationFeedVH(view)
+        view=LayoutInflater.from(parent.context).inflate(R.layout.row_notification_feed1,parent,false)
+    return RowNotificationFeed1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowNotificationFeedVH, position: Int): Unit {
-    val notificationFeedRowModel = NotificationFeedRowModel()
+  public override fun onBindViewHolder(holder: RowNotificationFeed1VH, position: Int): Unit {
+    val notificationFeed1RowModel = NotificationFeed1RowModel()
     // TODO uncomment following line after integration with data source
-    // val notificationFeedRowModel = list[position]
-    holder.binding.notificationFeedRowModel = notificationFeedRowModel
+    // val notificationFeed1RowModel = list[position]
+    holder.binding.notificationFeed1RowModel = notificationFeed1RowModel
   }
 
   public override fun getItemCount(): Int = 3
@@ -41,14 +41,14 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: NotificationFeedRowModel
+      item: NotificationFeed1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowNotificationFeedVH(
+  public inner class RowNotificationFeed1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowNotificationFeedBinding = RowNotificationFeedBinding.bind(itemView)
+    public val binding: RowNotificationFeed1Binding = RowNotificationFeed1Binding.bind(itemView)
   }
 }

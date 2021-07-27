@@ -23,7 +23,8 @@
                 <ImageView android:clickable="true"
                     android:id="@+id/image"
                     android:layout_gravity="center_vertical"
-                    android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
+                    android:layout_height="@dimen/_24px"
+                    android:layout_marginStart="@dimen/_50px" android:layout_width="@dimen/_24px"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
         <androidx.core.widget.NestedScrollView
@@ -45,7 +46,7 @@
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     itemSpace="@{@dimen/_16px}"
-                    style="@style/groupStyle" tools:itemCount="2" tools:listitem="@layout/row_cart"/>
+                    style="@style/groupStyle" tools:itemCount="2" tools:listitem="@layout/row_cart1"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_1px"
@@ -60,7 +61,7 @@
                         android:paddingBottom="@dimen/_17px"
                         android:paddingStart="@dimen/_16px"
                         android:paddingTop="@dimen/_17px"
-                        android:text="@{cartVM.cartModel.txtEnterCuponCod}" style="@style/textStylePoppinsregular12_4"/>
+                        android:text="@string/msg_enter_cupon_cod" style="@style/textStylePoppinsregular12_4"/>
                     <TextView android:gravity="top|center"
                         android:id="@+id/txtApply"
                         android:layout_gravity="center_vertical"
@@ -71,113 +72,14 @@
                         android:paddingEnd="@dimen/_24px"
                         android:paddingStart="@dimen/_24px"
                         android:paddingTop="@dimen/_17px"
-                        android:text="@{cartVM.cartModel.txtApply}" style="@style/textStylePoppinsbold12_8"/>
+                        android:text="@string/lbl_apply" style="@style/textStylePoppinsbold12_8"/>
                 </LinearLayout>
-                <LinearLayout android:layout_gravity="center_horizontal"
+                <include android:id="@+id/included"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_1px"
                     android:layout_marginTop="@dimen/_16px"
                     android:layout_width="match_parent"
-                    android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_16px"
-                        android:layout_marginStart="@dimen/_16px"
-                        android:layout_marginTop="@dimen/_16px"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal" style="@style/groupStyle">
-                        <TextView android:gravity="top|start"
-                            android:id="@+id/txtItems3"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.19"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txtItems3}" style="@style/textStylePoppinsregular12"/>
-                        <TextView android:gravity="top|end"
-                            android:id="@+id/txt59886"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.49"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txt59886}" style="@style/textStylePoppinsregular12_1"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_16px"
-                        android:layout_marginStart="@dimen/_16px"
-                        android:layout_marginTop="@dimen/_12px"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal" style="@style/groupStyle">
-                        <TextView android:gravity="top|start"
-                            android:id="@+id/txtShipping"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.18"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txtShipping}" style="@style/textStylePoppinsregular12"/>
-                        <TextView android:gravity="top|end"
-                            android:id="@+id/txt4000"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.46"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txt4000}" style="@style/textStylePoppinsregular12_1"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_16px"
-                        android:layout_marginStart="@dimen/_16px"
-                        android:layout_marginTop="@dimen/_12px"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal" style="@style/groupStyle">
-                        <TextView android:gravity="top|start"
-                            android:id="@+id/txtImportCharges"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.32"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txtImportCharges}" style="@style/textStylePoppinsregular12"/>
-                        <TextView android:gravity="top|end"
-                            android:id="@+id/txt12800"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.47"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txt12800}" style="@style/textStylePoppinsregular12_1"/>
-                    </LinearLayout>
-                    <View android:background="@color/blue_50"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="@dimen/_1px"
-                        android:layout_marginEnd="@dimen/_16px"
-                        android:layout_marginStart="@dimen/_16px"
-                        android:layout_marginTop="@dimen/_12px" android:layout_width="match_parent"/>
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_16px"
-                        android:layout_marginStart="@dimen/_16px"
-                        android:layout_marginTop="@dimen/_11px"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal" style="@style/groupStyle">
-                        <TextView android:gravity="top|start"
-                            android:id="@+id/txtTotalPrice"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.23"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txtTotalPrice}" style="@style/textStylePoppinsbold12_2"/>
-                        <TextView android:gravity="top|end"
-                            android:id="@+id/txt76686"
-                            android:layout_gravity="center_vertical"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.49"
-                            android:layout_width="0dp"
-                            android:text="@{cartVM.cartModel.txt76686}" style="@style/textStylePoppinsbold12"/>
-                    </LinearLayout>
-                </LinearLayout>
+                    layout="@layout/component_order_details_total_price" orderDetailsTotalPriceModel="@{cartVM.includedModel}"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:gravity="center"
                     android:id="@+id/btnCheckOut"
@@ -193,116 +95,10 @@
                     android:text="@string/lbl_check_out" style="@style/textStylePoppinsbold14"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-        <LinearLayout android:layout_gravity="center_horizontal"
+        <include android:id="@+id/included1"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16px"
             android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylewhite_1">
-            <View android:background="@color/blue_50"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="@dimen/_1px" android:layout_width="match_parent"/>
-            <LinearLayout android:layout_gravity="center_horizontal"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15px"
-                android:layout_width="match_parent"
-                android:orientation="horizontal" style="@style/groupStyle">
-                <LinearLayout android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:layout_width="0dp"
-                    android:orientation="vertical" style="@style/groupStyle">
-                    <ImageView
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="@dimen/_24px"
-                        android:layout_marginEnd="@dimen/_25px"
-                        android:layout_marginStart="@dimen/_25px" android:layout_width="@dimen/_24px"/>
-                    <TextView android:gravity="top|center"
-                        android:id="@+id/txtHome"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4px"
-                        android:layout_width="match_parent"
-                        android:text="@{cartVM.cartModel.txtHome}" style="@style/textStylePoppinsregular10"/>
-                </LinearLayout>
-                <LinearLayout android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:layout_width="0dp"
-                    android:orientation="vertical" style="@style/groupStyle">
-                    <ImageView
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="@dimen/_24px"
-                        android:layout_marginEnd="@dimen/_25px"
-                        android:layout_marginStart="@dimen/_25px" android:layout_width="@dimen/_24px"/>
-                    <TextView android:gravity="top|center"
-                        android:id="@+id/txtExplore"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4px"
-                        android:layout_width="match_parent"
-                        android:text="@{cartVM.cartModel.txtExplore}" style="@style/textStylePoppinsregular10"/>
-                </LinearLayout>
-                <LinearLayout android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:layout_width="0dp"
-                    android:orientation="vertical" style="@style/groupStyle">
-                    <FrameLayout
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_15px"
-                        android:layout_marginStart="@dimen/_15px" android:layout_width="match_parent">
-                        <ImageView android:layout_gravity="top|end"
-                            android:layout_height="@dimen/_20px"
-                            android:layout_marginBottom="@dimen/_14px" android:layout_width="@dimen/_20px"/>
-                        <ImageView android:layout_gravity="center"
-                            android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
-                    </FrameLayout>
-                    <TextView android:gravity="top|center"
-                        android:id="@+id/txtCart"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4px"
-                        android:layout_width="match_parent"
-                        android:text="@{cartVM.cartModel.txtCart}" style="@style/textStylePoppinsbold10_1"/>
-                </LinearLayout>
-                <LinearLayout android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:layout_width="0dp"
-                    android:orientation="vertical" style="@style/groupStyle">
-                    <ImageView
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="@dimen/_24px"
-                        android:layout_marginEnd="@dimen/_25px"
-                        android:layout_marginStart="@dimen/_25px" android:layout_width="@dimen/_24px"/>
-                    <TextView android:gravity="top|center"
-                        android:id="@+id/txtOffer"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4px"
-                        android:layout_width="match_parent"
-                        android:text="@{cartVM.cartModel.txtOffer}" style="@style/textStylePoppinsregular10"/>
-                </LinearLayout>
-                <LinearLayout android:layout_gravity="center_vertical"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:layout_width="0dp"
-                    android:orientation="vertical" style="@style/groupStyle">
-                    <ImageView
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="@dimen/_24px"
-                        android:layout_marginEnd="@dimen/_25px"
-                        android:layout_marginStart="@dimen/_25px" android:layout_width="@dimen/_24px"/>
-                    <TextView android:gravity="top|center"
-                        android:id="@+id/txtAccount"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4px"
-                        android:layout_width="match_parent"
-                        android:text="@{cartVM.cartModel.txtAccount}" style="@style/textStylePoppinsregular10"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
+            layout="@layout/component_offer_screen_bottombar" offerScreenBottombarModel="@{cartVM.included1Model}"/>
     </LinearLayout>
 </layout>

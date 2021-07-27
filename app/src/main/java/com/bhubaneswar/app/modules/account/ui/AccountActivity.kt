@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityAccountBinding
-import com.bhubaneswar.app.modules.account.`data`.model.AccountRowModel
+import com.bhubaneswar.app.modules.account.`data`.model.Account1RowModel
 import com.bhubaneswar.app.modules.account.`data`.viewmodel.AccountVM
 import com.bhubaneswar.app.modules.notification.ui.NotificationActivity
 import kotlin.Int
@@ -22,7 +22,7 @@ public class AccountActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: AccountRowModel
+    item: Account1RowModel
   ): Unit {
     when(view.id) {
     }
@@ -35,7 +35,7 @@ public class AccountActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : AccountRowModel) {
+                override fun onItemClick(view:View, position:Int, item : Account1RowModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

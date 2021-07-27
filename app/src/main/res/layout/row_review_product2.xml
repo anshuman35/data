@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewProduct2RowModel" type="com.bhubaneswar.app.modules.reviewproduct1.data.model.ReviewProduct2RowModel"/>
+    </data>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+        <include android:id="@+id/included"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_50px"
+            android:layout_width="match_parent" layout="@layout/component_review_product"/>
+        <TextView android:gravity="top|start"
+            android:id="@+id/txtAirMaxAreAlw"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16px"
+            android:layout_width="match_parent"
+            android:text="@{reviewProduct2RowModel.txtAirMaxAreAlw}" style="@style/textStylePoppinsregular12"/>
+        <TextView android:gravity="top|start"
+            android:id="@+id/txtDecember1020"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16px"
+            android:layout_width="match_parent"
+            android:text="@{reviewProduct2RowModel.txtDecember1020}" style="@style/textStylePoppinsregular10"/>
+    </LinearLayout>
+</layout>

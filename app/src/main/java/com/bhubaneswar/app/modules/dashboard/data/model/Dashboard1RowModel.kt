@@ -8,8 +8,8 @@ public data class Dashboard1RowModel(
   /**
    * TODO Replace with dynamic value
    */
-  public val txtMsNikeAirM: String? =
-      MyApp.getInstance().resources.getString(R.string.msg_ms_nike_air_m)
+  public val txtFsNikeAirM: String? =
+      MyApp.getInstance().resources.getString(R.string.msg_fs_nike_air_m)
   ,
   /**
    * TODO Replace with dynamic value

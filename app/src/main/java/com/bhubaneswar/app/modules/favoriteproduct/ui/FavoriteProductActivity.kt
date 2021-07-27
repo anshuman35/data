@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityFavoriteProductBinding
-import com.bhubaneswar.app.modules.favoriteproduct.`data`.model.FavoriteProductRowModel
+import com.bhubaneswar.app.modules.favoriteproduct.`data`.model.FavoriteProduct1RowModel
 import com.bhubaneswar.app.modules.favoriteproduct.`data`.viewmodel.FavoriteProductVM
 import kotlin.Int
 import kotlin.String
@@ -23,7 +23,7 @@ public class FavoriteProductActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: FavoriteProductRowModel
+    item: FavoriteProduct1RowModel
   ): Unit {
     when(view.id) {
         }
@@ -37,7 +37,7 @@ public class FavoriteProductActivity : AppCompatActivity() {
     recyclerViewAdapter.setOnItemClickListener(
                 object : RecyclerViewAdapter.OnItemClickListener {
                     override fun onItemClick(view:View, position:Int, item :
-        FavoriteProductRowModel) {
+        FavoriteProduct1RowModel) {
                         onClickRecyclerView(view, position, item)
                     }
                 }

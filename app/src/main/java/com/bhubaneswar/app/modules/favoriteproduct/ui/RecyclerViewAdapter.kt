@@ -5,31 +5,32 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowFavoriteProductBinding
-import com.bhubaneswar.app.modules.favoriteproduct.`data`.model.FavoriteProductRowModel
+import com.bhubaneswar.app.databinding.RowFavoriteProduct1Binding
+import com.bhubaneswar.app.modules.favoriteproduct.`data`.model.FavoriteProduct1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<FavoriteProductRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowFavoriteProductVH>() {
+  public val list: List<FavoriteProduct1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowFavoriteProduct1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowFavoriteProductVH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_favorite_product,parent,false)
-    return RowFavoriteProductVH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowFavoriteProduct1VH {
+    val
+        view=LayoutInflater.from(parent.context).inflate(R.layout.row_favorite_product1,parent,false)
+    return RowFavoriteProduct1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowFavoriteProductVH, position: Int): Unit {
-    val favoriteProductRowModel = FavoriteProductRowModel()
+  public override fun onBindViewHolder(holder: RowFavoriteProduct1VH, position: Int): Unit {
+    val favoriteProduct1RowModel = FavoriteProduct1RowModel()
     // TODO uncomment following line after integration with data source
-    // val favoriteProductRowModel = list[position]
-    holder.binding.favoriteProductRowModel = favoriteProductRowModel
+    // val favoriteProduct1RowModel = list[position]
+    holder.binding.favoriteProduct1RowModel = favoriteProduct1RowModel
   }
 
   public override fun getItemCount(): Int = 4
@@ -40,19 +41,19 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: FavoriteProductRowModel
+      item: FavoriteProduct1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowFavoriteProductVH(
+  public inner class RowFavoriteProduct1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowFavoriteProductBinding = RowFavoriteProductBinding.bind(itemView)
+    public val binding: RowFavoriteProduct1Binding = RowFavoriteProduct1Binding.bind(itemView)
     init {
       binding.linear.setOnClickListener {
         // TODO replace with value from datasource
-        clickListener?.onItemClick(it, adapterPosition, FavoriteProductRowModel())
+        clickListener?.onItemClick(it, adapterPosition, FavoriteProduct1RowModel())
       }
     }
   }

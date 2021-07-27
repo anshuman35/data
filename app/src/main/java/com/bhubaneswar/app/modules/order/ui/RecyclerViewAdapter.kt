@@ -5,31 +5,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowOrderBinding
-import com.bhubaneswar.app.modules.order.`data`.model.OrderRowModel
+import com.bhubaneswar.app.databinding.RowOrder1Binding
+import com.bhubaneswar.app.modules.order.`data`.model.Order1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<OrderRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowOrderVH>() {
+  public val list: List<Order1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowOrder1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowOrderVH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_order,parent,false)
-    return RowOrderVH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowOrder1VH {
+    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_order1,parent,false)
+    return RowOrder1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowOrderVH, position: Int): Unit {
-    val orderRowModel = OrderRowModel()
+  public override fun onBindViewHolder(holder: RowOrder1VH, position: Int): Unit {
+    val order1RowModel = Order1RowModel()
     // TODO uncomment following line after integration with data source
-    // val orderRowModel = list[position]
-    holder.binding.orderRowModel = orderRowModel
+    // val order1RowModel = list[position]
+    holder.binding.order1RowModel = order1RowModel
   }
 
   public override fun getItemCount(): Int = 3
@@ -40,14 +40,14 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: OrderRowModel
+      item: Order1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowOrderVH(
+  public inner class RowOrder1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowOrderBinding = RowOrderBinding.bind(itemView)
+    public val binding: RowOrder1Binding = RowOrder1Binding.bind(itemView)
   }
 }

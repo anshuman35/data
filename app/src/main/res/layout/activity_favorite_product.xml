@@ -12,6 +12,7 @@
             android:layout_height="wrap_content" android:layout_width="match_parent">
             <LinearLayout android:layout_gravity="start"
                 android:layout_height="@dimen/_24px"
+                android:layout_marginEnd="@dimen/_50px"
                 android:layout_width="match_parent" android:orientation="horizontal">
                 <ImageView android:layout_gravity="center_vertical"
                     android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
@@ -38,7 +39,7 @@
                     android:nestedScrollingEnabled="false"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="2" itemSpace="@{@dimen/_13px}"
-                    tools:itemCount="4" tools:listitem="@layout/row_favorite_product"/>
+                    tools:itemCount="4" tools:listitem="@layout/row_favorite_product1"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

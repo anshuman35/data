@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityNotificationOfferBinding
-import com.bhubaneswar.app.modules.notificationoffer.`data`.model.NotificationOfferRowModel
+import com.bhubaneswar.app.modules.notificationactivityactivitylist01.`data`.model.NotificationActivityActivityList01Model
 import com.bhubaneswar.app.modules.notificationoffer.`data`.viewmodel.NotificationOfferVM
 import kotlin.Int
 import kotlin.String
@@ -21,7 +21,7 @@ public class NotificationOfferActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: NotificationOfferRowModel
+    item: NotificationActivityActivityList01Model
   ): Unit {
     when(view.id) {
     }
@@ -34,8 +34,8 @@ public class NotificationOfferActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : NotificationOfferRowModel)
-        {
+                override fun onItemClick(view:View, position:Int, item :
+                        NotificationActivityActivityList01Model) {
                     onClickRecyclerView(view, position, item)
                 }
             }

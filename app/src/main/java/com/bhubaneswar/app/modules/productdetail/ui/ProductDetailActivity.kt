@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityProductDetailBinding
-import com.bhubaneswar.app.modules.productdetail.`data`.model.ProductDetailRowModel
 import com.bhubaneswar.app.modules.productdetail.`data`.viewmodel.ProductDetailVM
-import com.bhubaneswar.app.modules.reviewproduct.ui.ReviewProductActivity
+import com.bhubaneswar.app.modules.productdetailproduct01.`data`.model.ProductDetailProduct01Model
+import com.bhubaneswar.app.modules.reviewproduct1.ui.ReviewProduct1Activity
 import com.bhubaneswar.app.modules.search.ui.SearchActivity
 import kotlin.Int
 import kotlin.String
@@ -23,7 +23,7 @@ public class ProductDetailActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: ProductDetailRowModel
+    item: ProductDetailProduct01Model
   ): Unit {
     when(view.id) {
     }
@@ -36,7 +36,8 @@ public class ProductDetailActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : ProductDetailRowModel) {
+                override fun onItemClick(view:View, position:Int, item :
+        ProductDetailProduct01Model) {
                     onClickRecyclerView(view, position, item)
                 }
             }
@@ -44,7 +45,7 @@ public class ProductDetailActivity : AppCompatActivity() {
     binding.lifecycleOwner = this
     binding.productDetailVM = viewModel
     binding.txtSeeMore.setOnClickListener {
-      val destIntent = ReviewProductActivity.getIntent(this, null)
+      val destIntent = ReviewProduct1Activity.getIntent(this, null)
       startActivity(destIntent)
     }
     binding.image.setOnClickListener {

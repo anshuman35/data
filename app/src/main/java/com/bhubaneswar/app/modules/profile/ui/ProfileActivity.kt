@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityProfileBinding
-import com.bhubaneswar.app.modules.profile.`data`.model.ProfileRowModel
+import com.bhubaneswar.app.modules.profile.`data`.model.Profile1RowModel
 import com.bhubaneswar.app.modules.profile.`data`.viewmodel.ProfileVM
 import kotlin.Int
 import kotlin.String
@@ -21,7 +21,7 @@ public class ProfileActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: ProfileRowModel
+    item: Profile1RowModel
   ): Unit {
     when(view.id) {
     }
@@ -34,7 +34,7 @@ public class ProfileActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : ProfileRowModel) {
+                override fun onItemClick(view:View, position:Int, item : Profile1RowModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

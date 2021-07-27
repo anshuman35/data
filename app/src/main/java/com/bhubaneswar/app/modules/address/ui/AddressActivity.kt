@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityAddressBinding
-import com.bhubaneswar.app.modules.address.`data`.model.AddressRowModel
 import com.bhubaneswar.app.modules.address.`data`.viewmodel.AddressVM
+import com.bhubaneswar.app.modules.addressaddress1selected.`data`.model.AddressAddress1SelectedModel
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -21,7 +21,7 @@ public class AddressActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: AddressRowModel
+    item: AddressAddress1SelectedModel
   ): Unit {
     when(view.id) {
     }
@@ -34,7 +34,8 @@ public class AddressActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : AddressRowModel) {
+                override fun onItemClick(view:View, position:Int, item :
+        AddressAddress1SelectedModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

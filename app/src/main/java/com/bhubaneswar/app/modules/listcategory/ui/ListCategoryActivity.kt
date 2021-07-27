@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityListCategoryBinding
-import com.bhubaneswar.app.modules.listcategory.`data`.model.ListCategoryRowModel
+import com.bhubaneswar.app.modules.listcategory.`data`.model.ListCategory1RowModel
 import com.bhubaneswar.app.modules.listcategory.`data`.viewmodel.ListCategoryVM
 import kotlin.Int
 import kotlin.String
@@ -23,7 +23,7 @@ public class ListCategoryActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: ListCategoryRowModel
+    item: ListCategory1RowModel
   ): Unit {
     when(view.id) {
         }
@@ -36,7 +36,8 @@ public class ListCategoryActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
                 object : RecyclerViewAdapter.OnItemClickListener {
-                    override fun onItemClick(view:View, position:Int, item : ListCategoryRowModel) {
+                    override fun onItemClick(view:View, position:Int, item : ListCategory1RowModel)
+        {
                         onClickRecyclerView(view, position, item)
                     }
                 }

@@ -10,11 +10,11 @@
         <ImageView android:layout_gravity="center_horizontal"
             android:layout_height="@dimen/_70px" android:layout_width="@dimen/_70px"/>
         <TextView android:gravity="top|center"
-            android:id="@+id/txtDress"
+            android:id="@+id/txtManShirt"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8px"
             android:layout_width="match_parent"
-            android:text="@{explore1RowModel.txtDress}" style="@style/textStylePoppinsregular10"/>
+            android:text="@{explore1RowModel.txtManShirt}" style="@style/textStylePoppinsregular10"/>
     </LinearLayout>
 </layout>

@@ -5,31 +5,34 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowDashboard1Binding
-import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard1RowModel
+import com.bhubaneswar.app.databinding.ComponentProductDetailProduct01Binding
+import com.bhubaneswar.app.modules.productdetailproduct01.`data`.model.ProductDetailProduct01Model
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerView1Adapter(
-  public val list: List<Dashboard1RowModel>
-) : RecyclerView.Adapter<RecyclerView1Adapter.RowDashboard1VH>() {
+  public val list: List<ProductDetailProduct01Model>
+) : RecyclerView.Adapter<RecyclerView1Adapter.ComponentProductDetailProduct01VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowDashboard1VH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_dashboard1,parent,false)
-    return RowDashboard1VH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
+      ComponentProductDetailProduct01VH {
+    val
+        view=LayoutInflater.from(parent.context).inflate(R.layout.component_product_detail_product01,parent,false)
+    return ComponentProductDetailProduct01VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowDashboard1VH, position: Int): Unit {
-    val dashboard1RowModel = Dashboard1RowModel()
+  public override fun onBindViewHolder(holder: ComponentProductDetailProduct01VH, position: Int):
+      Unit {
+    val productDetailProduct01Model = ProductDetailProduct01Model()
     // TODO uncomment following line after integration with data source
-    // val dashboard1RowModel = list[position]
-    holder.binding.dashboard1RowModel = dashboard1RowModel
+    // val productDetailProduct01Model = list[position]
+    holder.binding.productDetailProduct01Model = productDetailProduct01Model
   }
 
   public override fun getItemCount(): Int = 3
@@ -40,14 +43,15 @@ public class RecyclerView1Adapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: Dashboard1RowModel
+      item: ProductDetailProduct01Model
     ): Unit {
     }
   }
 
-  public inner class RowDashboard1VH(
+  public inner class ComponentProductDetailProduct01VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowDashboard1Binding = RowDashboard1Binding.bind(itemView)
+    public val binding: ComponentProductDetailProduct01Binding =
+        ComponentProductDetailProduct01Binding.bind(itemView)
   }
 }

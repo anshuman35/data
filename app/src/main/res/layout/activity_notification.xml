@@ -40,7 +40,7 @@
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    style="@style/groupStyle" tools:itemCount="3" tools:listitem="@layout/row_notification"/>
+                    style="@style/groupStyle" tools:itemCount="3" tools:listitem="@layout/row_notification1"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

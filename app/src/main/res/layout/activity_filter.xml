@@ -35,7 +35,8 @@
                 <TextView android:gravity="top|start"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
+                    android:layout_width="match_parent"
                     android:text="@string/lbl_price_range" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -85,11 +86,13 @@
                 <TextView android:gravity="top|start"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_36px"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:text="@string/lbl_condition" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_12px"
                     android:layout_width="match_parent"
                     android:orientation="horizontal" style="@style/groupStyle">
@@ -126,8 +129,9 @@
                 <TextView android:gravity="top|start"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_24px"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:text="@string/lbl_buying_format" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -172,6 +176,7 @@
                     <LinearLayout
                         android:layout_gravity="center_horizontal"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_50px"
                         android:layout_marginTop="@dimen/_8px"
                         android:layout_width="match_parent" android:orientation="horizontal">
                         <TextView android:gravity="top|start"
@@ -198,8 +203,9 @@
                 <TextView android:gravity="top|start"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_24px"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:text="@string/lbl_item_location" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -244,8 +250,9 @@
                     <TextView android:gravity="top|start"
                         android:layout_gravity="start"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_50px"
                         android:layout_marginTop="@dimen/_8px"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:paddingBottom="@dimen/_16px"
                         android:paddingStart="@dimen/_16px"
                         android:paddingTop="@dimen/_16px"
@@ -254,8 +261,9 @@
                 <TextView android:gravity="top|start"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_24px"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:text="@string/lbl_show_only" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -317,6 +325,7 @@
                     <LinearLayout
                         android:layout_gravity="center_horizontal"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_50px"
                         android:layout_marginTop="@dimen/_8px"
                         android:layout_width="match_parent" android:orientation="horizontal">
                         <TextView android:gravity="top|start"
@@ -342,6 +351,7 @@
                     <LinearLayout
                         android:layout_gravity="center_horizontal"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_50px"
                         android:layout_marginTop="@dimen/_8px"
                         android:layout_width="match_parent" android:orientation="horizontal">
                         <TextView android:gravity="top|start"
@@ -392,6 +402,7 @@
                     <TextView android:gravity="top|start"
                         android:layout_gravity="start"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_50px"
                         android:layout_marginTop="@dimen/_8px"
                         android:layout_width="match_parent"
                         android:paddingBottom="@dimen/_16px"

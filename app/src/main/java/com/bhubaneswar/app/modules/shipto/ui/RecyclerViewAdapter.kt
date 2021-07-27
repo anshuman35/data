@@ -5,31 +5,34 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowShipToBinding
-import com.bhubaneswar.app.modules.shipto.`data`.model.ShipToRowModel
+import com.bhubaneswar.app.databinding.ComponentAddressAddress1SelectedBinding
+import com.bhubaneswar.app.modules.addressaddress1selected.`data`.model.AddressAddress1SelectedModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<ShipToRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowShipToVH>() {
+  public val list: List<AddressAddress1SelectedModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.ComponentAddressAddress1SelectedVH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowShipToVH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_ship_to,parent,false)
-    return RowShipToVH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
+      ComponentAddressAddress1SelectedVH {
+    val
+        view=LayoutInflater.from(parent.context).inflate(R.layout.component_address_address_1_selected,parent,false)
+    return ComponentAddressAddress1SelectedVH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowShipToVH, position: Int): Unit {
-    val shipToRowModel = ShipToRowModel()
+  public override fun onBindViewHolder(holder: ComponentAddressAddress1SelectedVH, position: Int):
+      Unit {
+    val addressAddress1SelectedModel = AddressAddress1SelectedModel()
     // TODO uncomment following line after integration with data source
-    // val shipToRowModel = list[position]
-    holder.binding.shipToRowModel = shipToRowModel
+    // val addressAddress1SelectedModel = list[position]
+    holder.binding.addressAddress1SelectedModel = addressAddress1SelectedModel
   }
 
   public override fun getItemCount(): Int = 3
@@ -40,14 +43,15 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: ShipToRowModel
+      item: AddressAddress1SelectedModel
     ): Unit {
     }
   }
 
-  public inner class RowShipToVH(
+  public inner class ComponentAddressAddress1SelectedVH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowShipToBinding = RowShipToBinding.bind(itemView)
+    public val binding: ComponentAddressAddress1SelectedBinding =
+        ComponentAddressAddress1SelectedBinding.bind(itemView)
   }
 }

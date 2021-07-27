@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivitySearchBinding
 import com.bhubaneswar.app.modules.search.`data`.viewmodel.SearchVM
-import com.bhubaneswar.app.modules.searchresult.ui.SearchResultActivity
+import com.bhubaneswar.app.modules.searchresult1.ui.SearchResult1Activity
 import kotlin.String
 import kotlin.Unit
 
@@ -24,9 +24,9 @@ public class SearchActivity : AppCompatActivity() {
     binding.lifecycleOwner = this
     binding.searchVM = viewModel
     binding.txtNikeAirMax27.setOnClickListener {
-                  val destIntent = SearchResultActivity.getIntent(this, null)
-                  startActivity(destIntent)
-                }
+              val destIntent = SearchResult1Activity.getIntent(this, null)
+              startActivity(destIntent)
+            }
   }
 
   public companion object {

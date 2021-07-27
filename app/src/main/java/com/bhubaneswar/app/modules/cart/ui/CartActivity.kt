@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityCartBinding
-import com.bhubaneswar.app.modules.cart.`data`.model.CartRowModel
+import com.bhubaneswar.app.modules.cart.`data`.model.Cart1RowModel
 import com.bhubaneswar.app.modules.cart.`data`.viewmodel.CartVM
 import com.bhubaneswar.app.modules.notification.ui.NotificationActivity
 import kotlin.Int
@@ -22,7 +22,7 @@ public class CartActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: CartRowModel
+    item: Cart1RowModel
   ): Unit {
     when(view.id) {
     }
@@ -35,7 +35,7 @@ public class CartActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : CartRowModel) {
+                override fun onItemClick(view:View, position:Int, item : Cart1RowModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

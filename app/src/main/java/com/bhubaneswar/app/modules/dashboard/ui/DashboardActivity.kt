@@ -11,13 +11,13 @@ import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityDashboardBinding
 import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard1RowModel
 import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard2RowModel
-import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard3RowModel
-import com.bhubaneswar.app.modules.dashboard.`data`.model.DashboardRowModel
 import com.bhubaneswar.app.modules.dashboard.`data`.viewmodel.DashboardVM
 import com.bhubaneswar.app.modules.favoriteproduct.ui.FavoriteProductActivity
 import com.bhubaneswar.app.modules.listcategory.ui.ListCategoryActivity
 import com.bhubaneswar.app.modules.notification.ui.NotificationActivity
-import com.bhubaneswar.app.modules.offerscreen.ui.OfferScreenActivity
+import com.bhubaneswar.app.modules.offerscreen1.ui.OfferScreen1Activity
+import com.bhubaneswar.app.modules.offerscreenproduct01.`data`.model.OfferScreenProduct01Model
+import com.bhubaneswar.app.modules.productdetailproduct01.`data`.model.ProductDetailProduct01Model
 import com.bhubaneswar.app.modules.search.ui.SearchActivity
 import kotlin.Int
 import kotlin.String
@@ -31,7 +31,7 @@ public class DashboardActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: DashboardRowModel
+    item: Dashboard1RowModel
   ): Unit {
     when(view.id) {
         }
@@ -40,7 +40,7 @@ public class DashboardActivity : AppCompatActivity() {
   public fun onClickRecyclerView1(
     view: View,
     position: Int,
-    item: Dashboard1RowModel
+    item: ProductDetailProduct01Model
   ): Unit {
     when(view.id) {
         }
@@ -49,7 +49,7 @@ public class DashboardActivity : AppCompatActivity() {
   public fun onClickRecyclerView2(
     view: View,
     position: Int,
-    item: Dashboard2RowModel
+    item: OfferScreenProduct01Model
   ): Unit {
     when(view.id) {
         }
@@ -58,7 +58,7 @@ public class DashboardActivity : AppCompatActivity() {
   public fun onClickRecyclerView3(
     view: View,
     position: Int,
-    item: Dashboard3RowModel
+    item: Dashboard2RowModel
   ): Unit {
     when(view.id) {
         }
@@ -71,7 +71,7 @@ public class DashboardActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
                     object : RecyclerViewAdapter.OnItemClickListener {
-                        override fun onItemClick(view:View, position:Int, item : DashboardRowModel)
+                        override fun onItemClick(view:View, position:Int, item : Dashboard1RowModel)
         {
                             onClickRecyclerView(view, position, item)
                         }
@@ -81,8 +81,8 @@ public class DashboardActivity : AppCompatActivity() {
     binding.recyclerView1.adapter = recyclerView1Adapter
     recyclerView1Adapter.setOnItemClickListener(
                     object : RecyclerView1Adapter.OnItemClickListener {
-                        override fun onItemClick(view:View, position:Int, item : Dashboard1RowModel)
-        {
+                        override fun onItemClick(view:View, position:Int, item :
+                ProductDetailProduct01Model) {
                             onClickRecyclerView1(view, position, item)
                         }
                     }
@@ -91,8 +91,9 @@ public class DashboardActivity : AppCompatActivity() {
     binding.recyclerView2.adapter = recyclerView2Adapter
     recyclerView2Adapter.setOnItemClickListener(
                     object : RecyclerView2Adapter.OnItemClickListener {
-                        override fun onItemClick(view:View, position:Int, item : Dashboard2RowModel)
-        {
+                        override fun onItemClick(view:View, position:Int, item :
+            OfferScreenProduct01Model)
+                {
                             onClickRecyclerView2(view, position, item)
                         }
                     }
@@ -101,7 +102,7 @@ public class DashboardActivity : AppCompatActivity() {
     binding.recyclerView3.adapter = recyclerView3Adapter
     recyclerView3Adapter.setOnItemClickListener(
                     object : RecyclerView3Adapter.OnItemClickListener {
-                        override fun onItemClick(view:View, position:Int, item : Dashboard3RowModel)
+                        override fun onItemClick(view:View, position:Int, item : Dashboard2RowModel)
         {
                             onClickRecyclerView3(view, position, item)
                         }
@@ -126,7 +127,7 @@ public class DashboardActivity : AppCompatActivity() {
           startActivity(destIntent)
         }
     binding.linear.setOnClickListener {
-          val destIntent = OfferScreenActivity.getIntent(this, null)
+          val destIntent = OfferScreen1Activity.getIntent(this, null)
           startActivity(destIntent)
         }
   }

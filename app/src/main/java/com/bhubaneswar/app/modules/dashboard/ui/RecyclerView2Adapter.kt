@@ -5,31 +5,34 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowDashboard2Binding
-import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard2RowModel
+import com.bhubaneswar.app.databinding.ComponentOfferScreenProduct01Binding
+import com.bhubaneswar.app.modules.offerscreenproduct01.`data`.model.OfferScreenProduct01Model
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerView2Adapter(
-  public val list: List<Dashboard2RowModel>
-) : RecyclerView.Adapter<RecyclerView2Adapter.RowDashboard2VH>() {
+  public val list: List<OfferScreenProduct01Model>
+) : RecyclerView.Adapter<RecyclerView2Adapter.ComponentOfferScreenProduct01VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowDashboard2VH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_dashboard2,parent,false)
-    return RowDashboard2VH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
+      ComponentOfferScreenProduct01VH {
+    val
+        view=LayoutInflater.from(parent.context).inflate(R.layout.component_offer_screen_product01,parent,false)
+    return ComponentOfferScreenProduct01VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowDashboard2VH, position: Int): Unit {
-    val dashboard2RowModel = Dashboard2RowModel()
+  public override fun onBindViewHolder(holder: ComponentOfferScreenProduct01VH, position: Int):
+      Unit {
+    val offerScreenProduct01Model = OfferScreenProduct01Model()
     // TODO uncomment following line after integration with data source
-    // val dashboard2RowModel = list[position]
-    holder.binding.dashboard2RowModel = dashboard2RowModel
+    // val offerScreenProduct01Model = list[position]
+    holder.binding.offerScreenProduct01Model = offerScreenProduct01Model
   }
 
   public override fun getItemCount(): Int = 4
@@ -40,14 +43,21 @@ public class RecyclerView2Adapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: Dashboard2RowModel
+      item: OfferScreenProduct01Model
     ): Unit {
     }
   }
 
-  public inner class RowDashboard2VH(
+  public inner class ComponentOfferScreenProduct01VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowDashboard2Binding = RowDashboard2Binding.bind(itemView)
+    public val binding: ComponentOfferScreenProduct01Binding =
+        ComponentOfferScreenProduct01Binding.bind(itemView)
+    init {
+      binding.linear.setOnClickListener {
+        // TODO replace with value from datasource
+        clickListener?.onItemClick(it, adapterPosition, OfferScreenProduct01Model())
+      }
+    }
   }
 }

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityCreditCardAndDebitBinding
-import com.bhubaneswar.app.modules.creditcardanddebit.`data`.model.CreditCardAndDebitRowModel
+import com.bhubaneswar.app.modules.creditcardanddebit.`data`.model.CreditCardAndDebit1RowModel
 import com.bhubaneswar.app.modules.creditcardanddebit.`data`.viewmodel.CreditCardAndDebitVM
 import kotlin.Int
 import kotlin.String
@@ -21,7 +21,7 @@ public class CreditCardAndDebitActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: CreditCardAndDebitRowModel
+    item: CreditCardAndDebit1RowModel
   ): Unit {
     when(view.id) {
     }
@@ -34,8 +34,8 @@ public class CreditCardAndDebitActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : CreditCardAndDebitRowModel)
-        {
+                override fun onItemClick(view:View, position:Int, item :
+        CreditCardAndDebit1RowModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

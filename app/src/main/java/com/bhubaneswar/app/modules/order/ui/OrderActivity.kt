@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityOrderBinding
-import com.bhubaneswar.app.modules.order.`data`.model.OrderRowModel
+import com.bhubaneswar.app.modules.order.`data`.model.Order1RowModel
 import com.bhubaneswar.app.modules.order.`data`.viewmodel.OrderVM
 import kotlin.Int
 import kotlin.String
@@ -21,7 +21,7 @@ public class OrderActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: OrderRowModel
+    item: Order1RowModel
   ): Unit {
     when(view.id) {
     }
@@ -34,7 +34,7 @@ public class OrderActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : OrderRowModel) {
+                override fun onItemClick(view:View, position:Int, item : Order1RowModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

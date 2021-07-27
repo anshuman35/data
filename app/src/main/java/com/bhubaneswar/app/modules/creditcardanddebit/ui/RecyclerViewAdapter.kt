@@ -5,15 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowCreditCardAndDebitBinding
-import com.bhubaneswar.app.modules.creditcardanddebit.`data`.model.CreditCardAndDebitRowModel
+import com.bhubaneswar.app.databinding.RowCreditCardAndDebit1Binding
+import com.bhubaneswar.app.modules.creditcardanddebit.`data`.model.CreditCardAndDebit1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<CreditCardAndDebitRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowCreditCardAndDebitVH>() {
+  public val list: List<CreditCardAndDebit1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowCreditCardAndDebit1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
@@ -21,17 +21,17 @@ public class RecyclerViewAdapter(
   }
 
   public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
-      RowCreditCardAndDebitVH {
+      RowCreditCardAndDebit1VH {
     val
-        view=LayoutInflater.from(parent.context).inflate(R.layout.row_credit_card_and_debit,parent,false)
-    return RowCreditCardAndDebitVH(view)
+        view=LayoutInflater.from(parent.context).inflate(R.layout.row_credit_card_and_debit1,parent,false)
+    return RowCreditCardAndDebit1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowCreditCardAndDebitVH, position: Int): Unit {
-    val creditCardAndDebitRowModel = CreditCardAndDebitRowModel()
+  public override fun onBindViewHolder(holder: RowCreditCardAndDebit1VH, position: Int): Unit {
+    val creditCardAndDebit1RowModel = CreditCardAndDebit1RowModel()
     // TODO uncomment following line after integration with data source
-    // val creditCardAndDebitRowModel = list[position]
-    holder.binding.creditCardAndDebitRowModel = creditCardAndDebitRowModel
+    // val creditCardAndDebit1RowModel = list[position]
+    holder.binding.creditCardAndDebit1RowModel = creditCardAndDebit1RowModel
   }
 
   public override fun getItemCount(): Int = 2
@@ -42,19 +42,19 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: CreditCardAndDebitRowModel
+      item: CreditCardAndDebit1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowCreditCardAndDebitVH(
+  public inner class RowCreditCardAndDebit1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowCreditCardAndDebitBinding = RowCreditCardAndDebitBinding.bind(itemView)
+    public val binding: RowCreditCardAndDebit1Binding = RowCreditCardAndDebit1Binding.bind(itemView)
     init {
       binding.card.setOnClickListener {
         // TODO replace with value from datasource
-        clickListener?.onItemClick(it, adapterPosition, CreditCardAndDebitRowModel())
+        clickListener?.onItemClick(it, adapterPosition, CreditCardAndDebit1RowModel())
       }
     }
   }

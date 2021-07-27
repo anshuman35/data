@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityExploreBinding
 import com.bhubaneswar.app.modules.explore.`data`.model.Explore1RowModel
-import com.bhubaneswar.app.modules.explore.`data`.model.ExploreRowModel
+import com.bhubaneswar.app.modules.explore.`data`.model.Explore2RowModel
 import com.bhubaneswar.app.modules.explore.`data`.viewmodel.ExploreVM
 import com.bhubaneswar.app.modules.notification.ui.NotificationActivity
 import kotlin.Int
@@ -23,7 +23,7 @@ public class ExploreActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: ExploreRowModel
+    item: Explore1RowModel
   ): Unit {
     when(view.id) {
     }
@@ -32,7 +32,7 @@ public class ExploreActivity : AppCompatActivity() {
   public fun onClickRecyclerView1(
     view: View,
     position: Int,
-    item: Explore1RowModel
+    item: Explore2RowModel
   ): Unit {
     when(view.id) {
     }
@@ -45,7 +45,7 @@ public class ExploreActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : ExploreRowModel) {
+                override fun onItemClick(view:View, position:Int, item : Explore1RowModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }
@@ -54,7 +54,7 @@ public class ExploreActivity : AppCompatActivity() {
     binding.recyclerView1.adapter = recyclerView1Adapter
     recyclerView1Adapter.setOnItemClickListener(
             object : RecyclerView1Adapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : Explore1RowModel) {
+                override fun onItemClick(view:View, position:Int, item : Explore2RowModel) {
                     onClickRecyclerView1(view, position, item)
                 }
             }

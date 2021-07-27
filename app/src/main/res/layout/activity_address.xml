@@ -12,6 +12,7 @@
             android:layout_height="wrap_content" android:layout_width="match_parent">
             <LinearLayout android:layout_gravity="start"
                 android:layout_height="@dimen/_24px"
+                android:layout_marginEnd="@dimen/_50px"
                 android:layout_width="match_parent" android:orientation="horizontal">
                 <ImageView android:layout_gravity="center_vertical"
                     android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
@@ -38,15 +39,14 @@
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    itemSpace="@{@dimen/_18px}" tools:itemCount="2" tools:listitem="@layout/row_address"/>
+                    itemSpace="@{@dimen/_18px}" tools:itemCount="2" tools:listitem="@layout/component_address_address_1_selected"/>
                 <TextView android:gravity="top|center"
-                    android:id="@+id/txtAddAddress"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_100px"
                     android:layout_width="match_parent"
                     android:padding="@dimen/_16px"
-                    android:text="@{addressVM.addressModel.txtAddAddress}" style="@style/textStylePoppinsbold14"/>
+                    android:text="@string/lbl_add_address" style="@style/textStylePoppinsbold14"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chooseCreditOrDebitCardModel" type="com.bhubaneswar.app.modules.choosecreditordebitcard.data.model.ChooseCreditOrDebitCardModel"/>
+    </data>
+    <LinearLayout android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12px"
+            android:layout_weight="0.36" android:layout_width="0dp"
+            android:text="@string/lbl_choose_card" style="@style/textStylePoppinsbold16"/>
+        <ImageView android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24px"
+            android:layout_marginStart="@dimen/_50px" android:layout_width="@dimen/_24px"/>
+    </LinearLayout>
+</layout>

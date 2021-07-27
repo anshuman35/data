@@ -5,31 +5,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowAccountBinding
-import com.bhubaneswar.app.modules.account.`data`.model.AccountRowModel
+import com.bhubaneswar.app.databinding.RowAccount1Binding
+import com.bhubaneswar.app.modules.account.`data`.model.Account1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<AccountRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowAccountVH>() {
+  public val list: List<Account1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowAccount1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowAccountVH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_account,parent,false)
-    return RowAccountVH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowAccount1VH {
+    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_account1,parent,false)
+    return RowAccount1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowAccountVH, position: Int): Unit {
-    val accountRowModel = AccountRowModel()
+  public override fun onBindViewHolder(holder: RowAccount1VH, position: Int): Unit {
+    val account1RowModel = Account1RowModel()
     // TODO uncomment following line after integration with data source
-    // val accountRowModel = list[position]
-    holder.binding.accountRowModel = accountRowModel
+    // val account1RowModel = list[position]
+    holder.binding.account1RowModel = account1RowModel
   }
 
   public override fun getItemCount(): Int = 4
@@ -40,19 +40,19 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: AccountRowModel
+      item: Account1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowAccountVH(
+  public inner class RowAccount1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowAccountBinding = RowAccountBinding.bind(itemView)
+    public val binding: RowAccount1Binding = RowAccount1Binding.bind(itemView)
     init {
       binding.linear.setOnClickListener {
         // TODO replace with value from datasource
-        clickListener?.onItemClick(it, adapterPosition, AccountRowModel())
+        clickListener?.onItemClick(it, adapterPosition, Account1RowModel())
       }
     }
   }

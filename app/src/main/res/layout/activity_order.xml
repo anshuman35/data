@@ -10,14 +10,14 @@
         android:paddingStart="@dimen/_15px" style="@style/groupStylewhite_1">
         <LinearLayout android:layout_gravity="start"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" android:orientation="horizontal">
+            android:layout_width="match_parent" android:orientation="horizontal">
             <ImageView android:layout_gravity="center_vertical"
                 android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
             <TextView android:gravity="top|start"
                 android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_12px"
-                android:layout_width="wrap_content"
+                android:layout_weight="0.72" android:layout_width="0dp"
                 android:text="@string/lbl_order" style="@style/textStylePoppinsbold16"/>
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
@@ -27,6 +27,6 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            itemSpace="@{@dimen/_10px}" tools:itemCount="3" tools:listitem="@layout/row_order"/>
+            itemSpace="@{@dimen/_10px}" tools:itemCount="3" tools:listitem="@layout/row_order1"/>
     </LinearLayout>
 </layout>

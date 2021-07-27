@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bhubaneswar.app.R
 import com.bhubaneswar.app.databinding.ActivityShipToBinding
-import com.bhubaneswar.app.modules.shipto.`data`.model.ShipToRowModel
+import com.bhubaneswar.app.modules.addressaddress1selected.`data`.model.AddressAddress1SelectedModel
 import com.bhubaneswar.app.modules.shipto.`data`.viewmodel.ShipToVM
 import kotlin.Int
 import kotlin.String
@@ -21,7 +21,7 @@ public class ShipToActivity : AppCompatActivity() {
   public fun onClickRecyclerView(
     view: View,
     position: Int,
-    item: ShipToRowModel
+    item: AddressAddress1SelectedModel
   ): Unit {
     when(view.id) {
     }
@@ -34,7 +34,8 @@ public class ShipToActivity : AppCompatActivity() {
     binding.recyclerView.adapter = recyclerViewAdapter
     recyclerViewAdapter.setOnItemClickListener(
             object : RecyclerViewAdapter.OnItemClickListener {
-                override fun onItemClick(view:View, position:Int, item : ShipToRowModel) {
+                override fun onItemClick(view:View, position:Int, item :
+        AddressAddress1SelectedModel) {
                     onClickRecyclerView(view, position, item)
                 }
             }

@@ -6,5 +6,5 @@ public data class SearchResult1Model(
   /**
    * TODO Replace with dynamic value
    */
-  public var etSearchProductValue: String? = null
+  public var etNikeAirMaxValue: String? = null
 )

@@ -49,8 +49,9 @@
                 <TextView android:gravity="top|start"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_32px"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:text="@string/lbl_man_fashion" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -64,14 +65,15 @@
                         android:nestedScrollingEnabled="false"
                         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                         app:spanCount="4" itemSpace="@{@dimen/_21px}"
-                        tools:itemCount="6" tools:listitem="@layout/row_explore"/>
+                        tools:itemCount="6" tools:listitem="@layout/row_explore1"/>
                 </LinearLayout>
                 <TextView android:gravity="top|start"
                     android:id="@+id/txtWomanFashion"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_50px"
                     android:layout_marginTop="@dimen/_24px"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:text="@{exploreVM.exploreModel.txtWomanFashion}" style="@style/textStylePoppinsbold14_2"/>
                 <LinearLayout android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -84,7 +86,7 @@
                         android:layout_width="match_parent"
                         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                         app:spanCount="4" itemSpace="@{@dimen/_21px}"
-                        tools:itemCount="7" tools:listitem="@layout/row_explore1"/>
+                        tools:itemCount="7" tools:listitem="@layout/row_explore2"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

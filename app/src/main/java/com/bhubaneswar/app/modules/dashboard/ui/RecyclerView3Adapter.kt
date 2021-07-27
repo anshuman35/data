@@ -5,31 +5,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowDashboard3Binding
-import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard3RowModel
+import com.bhubaneswar.app.databinding.RowDashboard2Binding
+import com.bhubaneswar.app.modules.dashboard.`data`.model.Dashboard2RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerView3Adapter(
-  public val list: List<Dashboard3RowModel>
-) : RecyclerView.Adapter<RecyclerView3Adapter.RowDashboard3VH>() {
+  public val list: List<Dashboard2RowModel>
+) : RecyclerView.Adapter<RecyclerView3Adapter.RowDashboard2VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowDashboard3VH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_dashboard3,parent,false)
-    return RowDashboard3VH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowDashboard2VH {
+    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_dashboard2,parent,false)
+    return RowDashboard2VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowDashboard3VH, position: Int): Unit {
-    val dashboard3RowModel = Dashboard3RowModel()
+  public override fun onBindViewHolder(holder: RowDashboard2VH, position: Int): Unit {
+    val dashboard2RowModel = Dashboard2RowModel()
     // TODO uncomment following line after integration with data source
-    // val dashboard3RowModel = list[position]
-    holder.binding.dashboard3RowModel = dashboard3RowModel
+    // val dashboard2RowModel = list[position]
+    holder.binding.dashboard2RowModel = dashboard2RowModel
   }
 
   public override fun getItemCount(): Int = 5
@@ -40,14 +40,14 @@ public class RecyclerView3Adapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: Dashboard3RowModel
+      item: Dashboard2RowModel
     ): Unit {
     }
   }
 
-  public inner class RowDashboard3VH(
+  public inner class RowDashboard2VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowDashboard3Binding = RowDashboard3Binding.bind(itemView)
+    public val binding: RowDashboard2Binding = RowDashboard2Binding.bind(itemView)
   }
 }

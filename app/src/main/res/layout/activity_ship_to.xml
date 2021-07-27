@@ -23,7 +23,8 @@
                     android:layout_width="0dp"
                     android:text="@string/lbl_ship_to" style="@style/textStylePoppinsbold16"/>
                 <ImageView android:layout_gravity="center_vertical"
-                    android:layout_height="@dimen/_28px" android:layout_width="@dimen/_24px"/>
+                    android:layout_height="@dimen/_28px"
+                    android:layout_marginStart="@dimen/_50px" android:layout_width="@dimen/_24px"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
         <androidx.core.widget.NestedScrollView
@@ -40,7 +41,7 @@
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    itemSpace="@{@dimen/_22px}" tools:itemCount="3" tools:listitem="@layout/row_ship_to"/>
+                    itemSpace="@{@dimen/_22px}" tools:itemCount="3" tools:listitem="@layout/component_address_address_1_selected"/>
                 <androidx.appcompat.widget.AppCompatButton
                     android:gravity="center" android:id="@+id/btnNext"
                     android:layout_gravity="center_horizontal"

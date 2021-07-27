@@ -5,31 +5,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bhubaneswar.app.R
-import com.bhubaneswar.app.databinding.RowExploreBinding
-import com.bhubaneswar.app.modules.explore.`data`.model.ExploreRowModel
+import com.bhubaneswar.app.databinding.RowExplore1Binding
+import com.bhubaneswar.app.modules.explore.`data`.model.Explore1RowModel
 import kotlin.Int
 import kotlin.Unit
 import kotlin.collections.List
 
 public class RecyclerViewAdapter(
-  public val list: List<ExploreRowModel>
-) : RecyclerView.Adapter<RecyclerViewAdapter.RowExploreVH>() {
+  public val list: List<Explore1RowModel>
+) : RecyclerView.Adapter<RecyclerViewAdapter.RowExplore1VH>() {
   private var clickListener: OnItemClickListener? = null
 
   public fun setOnItemClickListener(clickListener: OnItemClickListener): Unit {
     this.clickListener = clickListener
   }
 
-  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowExploreVH {
-    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_explore,parent,false)
-    return RowExploreVH(view)
+  public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowExplore1VH {
+    val view=LayoutInflater.from(parent.context).inflate(R.layout.row_explore1,parent,false)
+    return RowExplore1VH(view)
   }
 
-  public override fun onBindViewHolder(holder: RowExploreVH, position: Int): Unit {
-    val exploreRowModel = ExploreRowModel()
+  public override fun onBindViewHolder(holder: RowExplore1VH, position: Int): Unit {
+    val explore1RowModel = Explore1RowModel()
     // TODO uncomment following line after integration with data source
-    // val exploreRowModel = list[position]
-    holder.binding.exploreRowModel = exploreRowModel
+    // val explore1RowModel = list[position]
+    holder.binding.explore1RowModel = explore1RowModel
   }
 
   public override fun getItemCount(): Int = 6
@@ -40,14 +40,14 @@ public class RecyclerViewAdapter(
     public fun onItemClick(
       view: View,
       position: Int,
-      item: ExploreRowModel
+      item: Explore1RowModel
     ): Unit {
     }
   }
 
-  public inner class RowExploreVH(
+  public inner class RowExplore1VH(
     view: View
   ) : RecyclerView.ViewHolder(view) {
-    public val binding: RowExploreBinding = RowExploreBinding.bind(itemView)
+    public val binding: RowExplore1Binding = RowExplore1Binding.bind(itemView)
   }
 }
