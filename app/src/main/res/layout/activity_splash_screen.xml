@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashScreenVM" type="com.bhubaneswar.app.modules.splashscreen.data.viewmodel.SplashScreenVM"/>
+    </data>
+    <ImageView android:clickable="true" android:id="@+id/image"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter" imageRes="@{@drawable/image_not_found}"/>
+</layout>

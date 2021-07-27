@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="orderDetailsModel" type="com.bhubaneswar.app.modules.orderdetails.data.model.OrderDetailsModel"/>
+    </data>
+    <LinearLayout android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+        <LinearLayout android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStyle">
+            <TextView android:gravity="top|start"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7" android:layout_width="0dp"
+                android:text="@string/msg_nike_air_zoom_p" style="@style/textStylePoppinsbold12_2"/>
+            <ImageView android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_24px"
+                android:layout_marginStart="@dimen/_13px" android:layout_width="@dimen/_24px"/>
+            <ImageView android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_24px"
+                android:layout_marginStart="@dimen/_8px" android:layout_width="@dimen/_24px"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_17px"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStyle">
+            <TextView android:gravity="top|start"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.39" android:layout_width="0dp"
+                android:text="@string/lbl_299_43" style="@style/textStylePoppinsbold12"/>
+            <ImageView android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_20px"
+                android:layout_marginStart="@dimen/_29px" android:layout_width="@dimen/_108px"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

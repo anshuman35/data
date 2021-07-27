@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchResultModel" type="com.bhubaneswar.app.modules.searchresult.data.model.SearchResultModel"/>
+    </data>
+    <LinearLayout android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15" android:layout_width="0dp"
+            android:text="@string/lbl_0_result" style="@style/textStylePoppinsbold12_2"/>
+        <TextView android:gravity="top|end"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_50px"
+            android:layout_weight="0.5" android:layout_width="0dp"
+            android:text="@string/lbl_man_shoes" style="@style/textStylePoppinsbold12_2"/>
+        <ImageView android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24px"
+            android:layout_marginStart="@dimen/_8px" android:layout_width="@dimen/_24px"/>
+    </LinearLayout>
+</layout>
