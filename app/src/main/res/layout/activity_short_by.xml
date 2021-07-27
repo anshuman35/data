@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="shortByVM" type="com.bhubaneswar.app.modules.shortby.data.viewmodel.ShortByVM"/>
+    </data>
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <LinearLayout android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16px"
+            android:layout_marginStart="@dimen/_16px"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_24px" android:layout_width="@dimen/_24px"/>
+            <TextView android:gravity="top|start"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12px"
+                android:layout_width="wrap_content"
+                android:text="@string/lbl_shory_by" style="@style/textStylePoppinsbold16"/>
+        </LinearLayout>
+        <TextView android:gravity="center|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_28px"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16px"
+            android:paddingStart="@dimen/_16px"
+            android:paddingTop="@dimen/_16px"
+            android:text="@string/lbl_best_match" style="@style/textStylePoppinsbold12_4"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16px"
+            android:paddingStart="@dimen/_16px"
+            android:paddingTop="@dimen/_16px"
+            android:text="@string/msg_time_ending_so" style="@style/textStylePoppinsbold12_5"/>
+        <TextView android:gravity="center|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16px"
+            android:paddingStart="@dimen/_16px"
+            android:paddingTop="@dimen/_16px"
+            android:text="@string/msg_time_newly_lis" style="@style/textStylePoppinsbold12_6"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16px"
+            android:paddingStart="@dimen/_16px"
+            android:paddingTop="@dimen/_16px"
+            android:text="@string/msg_price_shippin" style="@style/textStylePoppinsbold12_6"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16px"
+            android:paddingStart="@dimen/_16px"
+            android:paddingTop="@dimen/_16px"
+            android:text="@string/msg_price_shippin" style="@style/textStylePoppinsbold12_6"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_16px"
+            android:paddingStart="@dimen/_16px"
+            android:paddingTop="@dimen/_16px"
+            android:text="@string/msg_distance_neare" style="@style/textStylePoppinsbold12_6"/>
+    </LinearLayout>
+</layout>
