@@ -2,24 +2,31 @@ package com.bhubaneswar.app.appcomponents.di
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.loadKoinModules
 import org.koin.core.context.startKoin
+import org.koin.core.module.Module
 
 class MyApp : Application() {
 
-    override fun onCreate() {
+    private fun getKoinModules(): MutableList<Module> {
+        val koinModules = mutableListOf<Module>()
+        return koinModules
+    }
+
+    public override fun onCreate(): Unit {
         super.onCreate()
         instance = this
         startKoin {
+            androidLogger()
             androidContext(this@MyApp)
+            loadKoinModules(getKoinModules())
         }
     }
 
-    companion object {
+    public companion object {
         private lateinit var instance: MyApp
 
-        fun getInstance(): MyApp {
-            return instance
-        }
-
+        public fun getInstance(): MyApp = instance
     }
 }

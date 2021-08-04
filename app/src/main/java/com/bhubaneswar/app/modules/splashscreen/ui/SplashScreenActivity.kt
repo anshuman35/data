@@ -21,7 +21,7 @@ public class SplashScreenActivity : AppCompatActivity() {
     binding = DataBindingUtil.setContentView(this,R.layout.activity_splash_screen)
     binding.lifecycleOwner = this
     binding.splashScreenVM = viewModel
-    binding.image.setOnClickListener {
+    binding.txtGetmapidandloca.setOnClickListener {
       val destIntent = LoginActivity.getIntent(this, null)
       startActivity(destIntent)
     }
