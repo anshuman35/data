@@ -65,10 +65,3 @@ We were unable to find following Fonts, Please add manually to ```app/src/main/r
 poppinsbold700
 poppinsregular400
 ```
-### Drawables
-We were unable to find Drawables, Please add manually to ```app/src/main/res/drawable``` and replace image_not_found drawable with original file in xml
-
-| File Name | Not Found Drawable Count |
-| --- | :---: |
-| activity_splash_screen | 1 |
-

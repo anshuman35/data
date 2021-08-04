@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cartVM" type="com.bhubaneswar.app.modules.cart.data.viewmodel.CartVM"/>
+    </data>
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_1">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_24px"
+                android:layout_marginEnd="@dimen/_13px"
+                android:layout_marginStart="@dimen/_13px"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:gravity="top|start"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.23"
+                    android:layout_width="0dp"
+                    android:text="@string/lbl_your_cart" style="@style/textStylePoppinsbold16"/>
+                <ImageView android:clickable="true"
+                    android:id="@+id/image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24px"
+                    android:layout_marginStart="@dimen/_50px" android:layout_width="@dimen/_24px"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_15px"
+            android:layout_marginStart="@dimen/_15px"
+            android:layout_marginTop="@dimen/_24px"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1px"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16px}"
+                    style="@style/groupStyle" tools:itemCount="2" tools:listitem="@layout/row_cart1"/>
+                <LinearLayout android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1px"
+                    android:layout_marginTop="@dimen/_52px"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:gravity="center|start"
+                        android:id="@+id/txtEnterCuponCod"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_17px"
+                        android:paddingStart="@dimen/_16px"
+                        android:paddingTop="@dimen/_17px"
+                        android:text="@string/msg_enter_cupon_cod" style="@style/textStylePoppinsregular12_4"/>
+                    <TextView android:gravity="top|center"
+                        android:id="@+id/txtApply"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_17px"
+                        android:paddingEnd="@dimen/_24px"
+                        android:paddingStart="@dimen/_24px"
+                        android:paddingTop="@dimen/_17px"
+                        android:text="@string/lbl_apply" style="@style/textStylePoppinsbold12_8"/>
+                </LinearLayout>
+                <include android:id="@+id/included"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_1px"
+                    android:layout_marginTop="@dimen/_16px"
+                    android:layout_width="match_parent"
+                    layout="@layout/component_order_details_total_price" orderDetailsTotalPriceModel="@{cartVM.includedModel}"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:gravity="center"
+                    android:id="@+id/btnCheckOut"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1px"
+                    android:layout_marginTop="@dimen/_16px"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:paddingStart="@dimen/_30px"
+                    android:paddingTop="@dimen/_16px"
+                    android:text="@string/lbl_check_out" style="@style/textStylePoppinsbold14"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <include android:id="@+id/included1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16px"
+            android:layout_width="match_parent"
+            layout="@layout/component_offer_screen_bottombar" offerScreenBottombarModel="@{cartVM.included1Model}"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addressAddress1SelectedModel" type="com.bhubaneswar.app.modules.addressaddress1selected.data.model.AddressAddress1SelectedModel"/>
+    </data>
+    <LinearLayout android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_4">
+        <TextView android:gravity="top|start"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24px"
+            android:layout_marginStart="@dimen/_24px"
+            android:layout_marginTop="@dimen/_24px"
+            android:layout_width="match_parent"
+            android:text="@string/lbl_priscekila" style="@style/textStylePoppinsbold14_2"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24px"
+            android:layout_marginStart="@dimen/_24px"
+            android:layout_marginTop="@dimen/_16px"
+            android:layout_width="match_parent"
+            android:text="@string/msg_3711_spring_hil" style="@style/textStylePoppinsregular12"/>
+        <TextView android:gravity="top|start"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24px"
+            android:layout_marginStart="@dimen/_24px"
+            android:layout_marginTop="@dimen/_16px"
+            android:layout_width="match_parent"
+            android:text="@string/lbl_99_1234567890" style="@style/textStylePoppinsregular12"/>
+        <LinearLayout android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24px"
+            android:layout_marginStart="@dimen/_24px"
+            android:layout_marginTop="@dimen/_16px"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStyle">
+            <TextView android:gravity="top|start"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.26" android:layout_width="0dp"
+                android:text="@string/lbl_edit" style="@style/textStylePoppinsbold14_3"/>
+            <TextView android:gravity="top|start"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32px"
+                android:layout_weight="0.74" android:layout_width="0dp"
+                android:text="@string/lbl_delete" style="@style/textStylePoppinsbold14_5"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

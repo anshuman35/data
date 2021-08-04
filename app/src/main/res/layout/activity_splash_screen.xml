@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashScreenVM" type="com.bhubaneswar.app.modules.splashscreen.data.viewmodel.SplashScreenVM"/>
+    </data>
+    <TextView android:clickable="true"
+        android:id="@+id/txtGetmapidandloca"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text="@{splashScreenVM.splashScreenModel.txtGetmapidandloca}" style="@style/textStyleregular12"/>
+</layout>

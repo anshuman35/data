@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="favoriteProductFrame11Model" type="com.bhubaneswar.app.modules.favoriteproductframe11.data.model.FavoriteProductFrame11Model"/>
+    </data>
+    <LinearLayout android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+        <TextView android:gravity="top|start"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/msg_nike_air_max_27" style="@style/textStylePoppinsbold12_2"/>
+        <LinearLayout android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_50px"
+            android:layout_marginTop="@dimen/_4px"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStyle">
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:numStars="5"
+                android:progressBackgroundTint="@color/blue_50"
+                android:progressTint="@color/yellow_700"
+                android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

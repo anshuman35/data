@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="offerScreen1VM" type="com.bhubaneswar.app.modules.offerscreen1.data.viewmodel.OfferScreen1VM"/>
+    </data>
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" android:paddingEnd="@dimen/_16px"
+        android:paddingStart="@dimen/_16px" style="@style/groupStylewhite_1">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <include android:id="@+id/included"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                chooseCreditOrDebitCardModel="@{offerScreen1VM.includedModel}" layout="@layout/component_choose_credit_or_debit_card"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_44px"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <include android:id="@+id/included1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    layout="@layout/component_offer_screen" offerScreenModel="@{offerScreen1VM.included1Model}"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16px"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_13px}"
+                    tools:itemCount="4" tools:listitem="@layout/component_offer_screen_product01"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>
